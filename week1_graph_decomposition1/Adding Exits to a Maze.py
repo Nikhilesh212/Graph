@@ -1,6 +1,7 @@
 cc=1
 n,m=map(int,input().split())
 visit=[0]*(n+1)
+
 def visit_graph(i,l):
     global cc
     if not visit[i]:
@@ -9,12 +10,14 @@ def visit_graph(i,l):
             if visit[j]==0:
                 visit_graph(j,l)
 
+
 def no_island(l):
     for i in range(1,len(l)):
         if not visit[i]:
             visit_graph(i,l)
             global cc
             cc+=1
+
 
 adj_list=[[]for i in range(n+1)]
 for _ in range(m):
