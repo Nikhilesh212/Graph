@@ -6,6 +6,7 @@ for _ in range(m):
     adj_list[t_n].append(t_m)
     if t_n not in adj_list[t_m]:
         adj_list[t_m].append(t_n)
+        
 v,u=map(int,input().split())
 Q=deque()
 dist=[-1 for i in range(n+1)]
