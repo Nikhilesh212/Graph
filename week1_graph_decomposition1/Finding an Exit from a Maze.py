@@ -5,6 +5,7 @@ def visit_graph(i,l):
     for j in l[i]:
         if visit[j]==0:
             visit_graph(j,l)
+
 adj_list=[[]for i in range(n+1)]
 for _ in range(m):
     t_n,t_m=map(int,input().split())
