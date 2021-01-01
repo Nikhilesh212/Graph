@@ -6,11 +6,11 @@ for _ in range(m):
     adj_list[t_n].append(t_m)
     if t_n not in adj_list[t_m]:
         adj_list[t_m].append(t_n)
-        
+
 v,u=map(int,input().split())
 Q=deque()
 dist=[-1 for i in range(n+1)]
-def bfs(adj_list,v,u):
+def bfs(adj_list,v):
     dist[v]=0
     Q.append(v)
     while Q:
@@ -19,5 +19,5 @@ def bfs(adj_list,v,u):
             if dist[i]==-1:
                 Q.append(i)
                 dist[i]=dist[temp]+1
-bfs(adj_list,v,u)
+bfs(adj_list,v)
 print(dist[u])
