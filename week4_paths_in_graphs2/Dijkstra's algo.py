@@ -23,7 +23,6 @@ for _ in range(m):
     adj_list[i].append(j)
     d[(i,j)]=dis
 s,e=map(int,input().split())
-#print(d)
 heap=[(float("inf"),i) for i in range(n+1)]
 heap[s]=(0,s)
 h.heapify(heap)

@@ -7,7 +7,7 @@ for _ in range(m):
         adj_list[t_m].append(t_n)
 
 colour=[-1 for i in range(n+1)]
-def cfs(adj_list):
+def CFS(adj_list):
     for i in range(1,n+1):
         if colour[i]==-1:
             colour[i]=0
@@ -23,4 +23,4 @@ def cfs(adj_list):
                 elif colour[i]==colour[j]:
                     return 0
     return 1
-print(cfs(adj_list))
+print(CFS(adj_list))
