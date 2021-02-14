@@ -2,18 +2,16 @@
 import sys
 import math
 
-def clustering(x, y, k):
-    #write your code here
-    return -1.
-
-
-if __name__ == '__main__':
-    input = sys.stdin.read()
-    data = list(map(int, input.split()))
-    n = data[0]
-    data = data[1:]
-    x = data[0:2 * n:2]
-    y = data[1:2 * n:2]
-    data = data[2 * n:]
-    k = data[0]
-    print("{0:.9f}".format(clustering(x, y, k)))
+class disjoint:
+    def __init__(self,n):
+        self.rank=[1]*n
+        self.parent=[i for i in range(n)]
+    def find(self,i):
+        while self.parent[i]!=i:
+            i=self.parent[i]
+        return i
+    def union(self,i,j):
+        seti=self.find(i)
+        setj=self.find(j)
+        if seti!=setj:
+            if self.rank[seti]>self.rank

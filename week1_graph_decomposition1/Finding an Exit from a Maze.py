@@ -1,5 +1,6 @@
 n,m=map(int,input().split())
 visit=[0]*(n+1)
+
 def visit_graph(i,l):
     visit[i]=1
     for j in l[i]:
